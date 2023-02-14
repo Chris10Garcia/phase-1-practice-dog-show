@@ -18,13 +18,13 @@ then rerender page
 */
 
 
-function submitExistingDog(e, id){
+function submitExistingDog(formNode, id){
     const formValues = document.getElementById('dog-form')
 
     const dogObj = {
-        name : e.name.value,
-        breed : e.breed.value,
-        sex : e.sex.value,
+        name : formNode.name.value,
+        breed : formNode.breed.value,
+        sex : formNode.sex.value,
     }
 
     fetch(`${jsonURL}/${id}`, {
